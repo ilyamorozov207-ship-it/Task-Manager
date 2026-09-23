@@ -8,8 +8,9 @@ def add_task_to_gui(entry, listbox):
     task = entry.get()
     result = add_task(task)
     if result:
+        text = "☐ " + task
         task_ids.append(result)
-        listbox.insert(tk.END, task)
+        listbox.insert(tk.END, text)
         entry.delete(0, tk.END)
 
 def delete_task_from_gui(listbox):
